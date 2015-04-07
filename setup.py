@@ -8,7 +8,7 @@ use_setuptools()
 from setuptools import setup, Extension, find_packages
 
 src_dir = "src"
-include_dirs = glob.glob(os.path.join(os.getenv('EBROOTQHULL', 'src'), "libqhull"))
+include_dirs = glob.glob(os.path.join(os.getenv('EBROOTQHULL', 'src'), 'include', "libqhull"))
 #sources = glob.glob(os.path.join("src", "libqhull", "*.c"))
 sources = []
 if sys.platform.strip() == "darwin":
