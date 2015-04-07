@@ -8,8 +8,8 @@ use_setuptools()
 from setuptools import setup, Extension, find_packages
 
 src_dir = "src"
-include_dirs = glob.glob(os.path.join("src", "libqhull"))
-sources = glob.glob(os.path.join("src", "libqhull", "*.c"))
+include_dirs = glob.glob(os.path.join(os.getenv('EBROOTQHULL', 'src'), "libqhull"))
+#sources = glob.glob(os.path.join("src", "libqhull", "*.c"))
 if sys.platform.strip() == "darwin":
     include_dirs += glob.glob(os.path.join("src", "fmemopen"))
     sources += glob.glob(os.path.join("src", "fmemopen", "*.c"))
